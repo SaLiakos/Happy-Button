@@ -166,7 +166,7 @@ button{font:inherit;color:inherit}
 const UNSPLASH_KEY = "3yAZsx8AA9O-kk-oszG4zbcrawgoxA2fIY58uXQYMI4";
 /* ================================================================================ */
 /* ===== FESTE REZEPTFOTOS – diese Zeile wird über die Bildauswahl erzeugt ===== */
-const FIXED_PHOTOS = {};
+const FIXED_PHOTOS = {"20":{"id":"8meam8e0wEo","src":"https://images.unsplash.com/photo-1780019676104-79da19c02d8f?fm=jpg&q=80&w=1080&fit=max","alt":"Gulasch im schwarzen Topf mit Beilage","name":"sofia inductgroup","user":"https://unsplash.com/@sofia_induct"}};
 /* ================================================================================ */
 const RECIPES = [
 {t:"Die perfekte Bolognese",e:["🍝","🍅","🌿"],c:["#ff6b5e","#c2372b"],time:"2,5 Std.",serv:"4 Portionen",
@@ -379,7 +379,7 @@ let tripCat="Alle", lastTrip=-1;
 let PICKS={};try{PICKS=Object.assign({},FIXED_PHOTOS,JSON.parse(localStorage.getItem("happy-picks")||"{}"))}catch(e){PICKS=Object.assign({},FIXED_PHOTOS)}
 let CANDS=[], pickPage={}, pickIdx=Math.max(0,RECIPES.findIndex((x,k)=>!PICKS[k]));
 
-const RQ=["spaghetti bolognese","mushroom zucchini pasta","fluffy pancakes berries","strawberry cream dessert glass","yogurt parfait granola berries","roasted vegetables tray","roasted fennel parmesan","teriyaki chicken rice bowl","ramen bowl egg","tomato soup basil","roast chicken lemon potatoes","shakshuka","glazed salmon","pumpkin soup","mushroom risotto","pesto pasta","vegetarian chili beans","banana bread","chocolate mousse","crispy gnocchi tomatoes","beef goulash","pad thai","smash burger","apple crumble","cinnamon rolls frosting"];
+const RQ=["spaghetti bolognese","mushroom zucchini pasta","fluffy pancakes berries","strawberry cream dessert glass","yogurt parfait granola berries","roasted vegetables tray","roasted fennel parmesan","teriyaki chicken rice bowl","ramen bowl egg","tomato soup basil","roast chicken lemon potatoes","shakshuka","glazed salmon","pumpkin soup","mushroom risotto","pesto pasta","vegetarian chili beans","banana bread","chocolate mousse","crispy gnocchi tomatoes","beef stew","pad thai","smash burger","apple crumble","cinnamon rolls frosting"];
 const HAS_KEY=typeof UNSPLASH_KEY==="string"&&UNSPLASH_KEY.length>20&&!UNSPLASH_KEY.startsWith("HIER");
 let RT=0;
 async function unsplash(query,orient,cacheKey){
